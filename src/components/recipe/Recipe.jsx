@@ -35,7 +35,7 @@ function Recipe() {
             </ul>
           </figure>
         </header>
-        <main>
+        <section>
           <figure>
             <figcaption className={styles.heading}>Ingredients</figcaption>
             <ul>
@@ -86,7 +86,7 @@ function Recipe() {
             </ol>
           </figure>
           <hr />
-        </main>
+        </section>
         <footer>
           <h2 className={styles.heading}>Nutrition</h2>
           <p>
