@@ -49,8 +49,7 @@ figure {
   margin-right: auto;
 }
 .recipe header,
-.recipe main,
-.recipe footer {
+.recipe section {
   padding: 2rem;
 }
 
@@ -87,6 +86,7 @@ figure {
   margin-bottom: 0.8rem;
   padding-left: 1rem;
   position: relative;
+  font-weight: 300;
 }
 
 .recipe .prepationTM ul li::before {
@@ -114,20 +114,20 @@ figure {
   font-size: 1.7rem;
 }
 
-.recipe main figure:first-of-type figcaption {
-  margin: 1rem auto;
+.recipe section figure:first-of-type figcaption {
+  margin-bottom: 1rem;
 }
 
-.recipe main figure:first-of-type ul {
+.recipe section figure:first-of-type ul {
   list-style: none;
 }
-.recipe main figure:first-of-type ul li {
+.recipe section figure:first-of-type ul li {
   margin-bottom: 0.8rem;
   padding-left: 1rem;
   position: relative;
 }
 
-.recipe main figure ul li::before {
+.recipe section figure ul li::before {
   content: "";
   position: absolute;
   width: 0.25rem;
@@ -139,46 +139,24 @@ figure {
   transform: translateY(-50%);
 }
 
-.recipe main hr {
+.recipe section hr {
   width: 90%;
   opacity: 0.3;
   margin: 2rem auto;
 }
 
-@media (min-width: 768px) {
-  .recipe {
-    width: 50rem;
-    padding-top: 2rem;
-    border-radius: 0.5rem;
-    margin: 5rem auto;
-  }
-  .recipe .orderIMG {
-    max-width: 90%;
-    border-radius: 0.5rem;
-  }
-
-  .recipe .recipeType {
-    font-size: 2.8rem;
-  }
-
-  .recipe main hr {
-    width: 100%;
-  }
-}
-
-.recipe main figure:last-of-type {
+.recipe section figure:last-of-type {
   padding-right: 2.1rem;
 }
 
-.recipe main figure:last-of-type ol {
-  list-style-image: red;
+.recipe section figure:last-of-type ol {
   counter-reset: item;
 }
 
-.recipe main figure:last-of-type ol li span {
+.recipe section figure:last-of-type ol li span {
   font-weight: bold;
 }
-.recipe main figure:last-of-type ol li {
+.recipe section figure:last-of-type ol li {
   margin-bottom: 1rem;
   color: var(--stone-600);
   font-size: var(--fontSize);
@@ -186,7 +164,7 @@ figure {
   display: block;
   position: relative;
 }
-.recipe main figure:last-of-type ol li::before {
+.recipe section figure:last-of-type ol li::before {
   content: counter(item) ". ";
   counter-increment: item;
   color: var(--rown-800);
@@ -195,10 +173,17 @@ figure {
   left: -2rem;
 }
 
+.recipe hr:last-of-type {
+  margin-bottom: 0;
+}
+
+.recipe footer {
+  padding: 0 2rem 2rem 2rem;
+}
+
 .recipe footer p {
   line-height: 1.5;
   padding-right: 3rem;
-  margin: 1rem auto;
   color: var(--stone-600);
 }
 
@@ -219,4 +204,25 @@ figure {
 .recipe footer table tr td:last-of-type {
   color: var(--rown-800);
   font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .recipe {
+    width: 50rem;
+    padding-top: 2rem;
+    border-radius: 0.5rem;
+    margin: 5rem auto;
+  }
+  .recipe .orderIMG {
+    max-width: 90%;
+    border-radius: 0.5rem;
+  }
+
+  .recipe .recipeType {
+    font-size: 2.8rem;
+  }
+
+  .recipe section hr {
+    width: 100%;
+  }
 }
